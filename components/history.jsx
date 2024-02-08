@@ -16,7 +16,7 @@ import Rivalries from "./rivalries";
 import HistoricMoments from "./historicMoments";
 import Strategies from "./strategies";
 import FrenchiesPlayers from "./frenchPlayers";
-import MajorEvents from "./MajorEvents";
+import MajorEvents from "./majorEvents";
 
 const History = () => {
   return (
