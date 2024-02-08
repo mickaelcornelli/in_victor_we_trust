@@ -1,4 +1,4 @@
-import History from "./history";
+import History from "../../components/history"
 
 export const metadata = {
   title: "Histoire de la NBA - In Victor We Trust",

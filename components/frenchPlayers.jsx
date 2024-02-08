@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { extractPlayerIdFromImageUrl } from "../../lib/utils";
+import { extractPlayerIdFromImageUrl } from "../lib/utils";
 import Image from "next/image";
 
 const FrenchiesPlayers = ({ players }) => {

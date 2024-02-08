@@ -7,7 +7,7 @@ import {
   iconicRivalries,
   historicMoments,
   frenchPlayers,
-} from "../../constants/index";
+} from "../constants/index";
 import IntroNBA from "./intro";
 import TemporalEvolution from "./temporalEvolution";
 import IconicTeams from "./iconicTeams";
@@ -16,10 +16,9 @@ import Rivalries from "./rivalries";
 import HistoricMoments from "./historicMoments";
 import Strategies from "./strategies";
 import FrenchiesPlayers from "./frenchPlayers";
- import MajorEvents from "./MajorEvents" 
+import MajorEvents from "./MajorEvents";
 
 const History = () => {
-
   return (
     <>
       {/* Intro NBA */}
@@ -51,7 +50,6 @@ const History = () => {
 
       {/* Evenements majeurs */}
       <MajorEvents />
-
     </>
   );
 };

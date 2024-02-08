@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { cn, extractPlayerIdFromImageUrl } from "../../lib/utils";
+import { extractPlayerIdFromImageUrl } from "../lib/utils";
 
 const LegendsPlayers = ({ players }) => {
   return (
