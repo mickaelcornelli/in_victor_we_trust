@@ -1,12 +1,13 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
+import Link from "next/link";
 import { extractPlayerIdFromImageUrl } from "../../lib/utils";
-import Image from 'next/image';
+import Image from "next/image";
 
-const FrenchiesPlayers = ({players}) => {
+const FrenchiesPlayers = ({ players }) => {
   return (
-    <div className="w-full mx-auto p-6 bg-gray-900 shadow-md pt-8">
+    <div className="w-full p-6 bg-gray-900 shadow-md pt-8">
+      <div className="container mx-auto">
         <h2 className="text-2xl font-bold mb-4 text-white">
           Les Français en NBA
         </h2>
@@ -48,7 +49,8 @@ const FrenchiesPlayers = ({players}) => {
           </Link>
         ))}
       </div>
-  )
-}
+    </div>
+  );
+};
 
-export default FrenchiesPlayers
+export default FrenchiesPlayers;

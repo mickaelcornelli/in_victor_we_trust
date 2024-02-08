@@ -89,17 +89,96 @@
   .bg-mj {
     background-color: #CE1141;
   }
-  
+
   .bg-lj {
     background-color: #FDB927;
   }
-  
+
   .bg-wc {
     background-color: #5a2d81;
   }
-  
+
   .bg-kaj {
     background-color: #EEE1C6;
+  }
+
+  .basketball {
+    position: relative;
+    top: 25px;
+  }
+
+  .ball {
+    position: absolute;
+    background-color: #e76f51;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    border: 1px solid #333;
+    animation: bounce 2s ease-in infinite;
+  }
+
+  .ball:before,
+  .ball:after {
+    content: "";
+    position: absolute;
+    background-color: #333;
+    width: 30px;
+    height: 3px;
+    top:30px;
+    left: -5px;
+  }
+
+  .ball:before {
+    transform: rotate(45deg);
+  }
+
+  .ball:after {
+    transform: rotate(-45deg);
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+
+    25% {
+      transform: translate3d(0, -20px, 0) rotate(90deg);
+    }
+
+    50% {
+      transform: translate3d(0, 0, 0) rotate(180deg);
+    }
+
+    75% {
+      transform: translate3d(0, -20px, 0) rotate(270deg);
+    }
+
+    100% {
+      transform: translate3d(0, 0, 0) rotate(360deg);
+    }
+  }
+
+  @keyframes scale {
+    0% {
+      transform: scaleX(1);
+    }
+
+    25% {
+      transform: scaleX(0.7);
+    }
+
+    50% {
+      transform: scaleX(1);
+    }
+
+    75% {
+      transform: scaleX(0.7);
+    }
+
+    100% {
+      transform: scaleX(1);
+    }
   }
 
 }

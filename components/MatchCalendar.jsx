@@ -5,7 +5,11 @@ const MatchCalendar = ({ data, title }) => {
   return (
     <section
       id="dailymatchs"
-      className="w-full mx-auto p-6 bg-emerald-900 rounded-md shadow-md mt-8 mb-8"
+      className="w-full mx-auto p-6 rounded-md shadow-md mt-8 mb-8"
+      style={{
+                backgroundImage:"url(/matchs_background.webp)",
+                backgroundSize: "cover",
+              }}
     >
       <h2 className="text-2xl font-bold mb-4 text-emerald-100">{title}</h2>
       {data?.games.map((match) => {
@@ -13,7 +17,7 @@ const MatchCalendar = ({ data, title }) => {
         const formattedDate = scheduledDate.toISOString().split("T")[0];
 
         return (
-          <div key={match.id} className="mb-4 p-4 rounded-md bg-gray-800">
+          <div key={match.id} className="mb-4 p-4 rounded-md bg-gray-800/70">
             <Link href={`/match/${match.id}`}>
               <p className="text-lg font-bold text-white">
                 {match.home.name} vs {match.away.name}

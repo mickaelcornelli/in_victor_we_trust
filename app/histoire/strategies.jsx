@@ -1,14 +1,14 @@
 const Strategies = () => {
-    
   return (
-    <div className="w-full mx-auto p-6 bg-gray-900 shadow-md pt-8">
+    <div className="w-full p-6 bg-gray-900 shadow-md pt-8">
+      <div className="container mx-auto">
         <h2 className="text-2xl font-bold mb-4 text-white">
           Le Jeu Moderne en NBA
         </h2>
 
         <div className="lg:flex lg:justify-between">
           {/* Colonne de gauche pour le texte */}
-          <div className="lg:w-1/2 lg:pr-4">
+          <div className="lg:w-1/2 ">
             <div className="mb-6 border-b border-gray-300 pb-4">
               <h3 className="text-xl font-semibold mb-2 text-white">
                 Évolution des Stratégies de Jeu
@@ -43,7 +43,7 @@ const Strategies = () => {
 
           {/* Colonne de droite pour la vidéo */}
           <div className="lg:w-1/2 lg:pl-4">
-            <div className="mb-6 border-b border-gray-300 pb-4">
+            <div className="mb-6 border-b border-gray-300 pb-4 md:border-0 ">
               <h3 className="text-xl font-semibold mb-2 text-white">
                 Vidéo sur le Jeu Moderne
               </h3>
@@ -57,7 +57,8 @@ const Strategies = () => {
           </div>
         </div>
       </div>
-  )
-}
+    </div>
+  );
+};
 
-export default Strategies
+export default Strategies;
