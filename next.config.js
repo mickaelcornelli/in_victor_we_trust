@@ -13,6 +13,10 @@ const nextConfig = {
       },
       {
         protocol: 'https',
+        hostname: "ak-static.cms.nba.com",
+      },
+      {
+        protocol: 'https',
         hostname: "upload.wikimedia.org",
       },
       {
