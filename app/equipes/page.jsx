@@ -4,7 +4,7 @@ export const metadata = {
     "Découvrez les équipes de la NBA ainsi que celle d'antant.",
 };
 
-import Teams from "./teams"
+import Teams from "../../components/teams"
 
 const page = () => {
   return (

@@ -5,7 +5,7 @@ import {
   getSpecificPlayer,
   researchKeywordOnYoutube,
   getTeamName,
-} from "../../../api/api";
+} from "../api/api";
 import { ThreeDots } from "react-loader-spinner";
 import Image from "next/image";
 import Link from "next/link";

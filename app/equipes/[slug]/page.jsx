@@ -4,7 +4,7 @@ export const metadata = {
     "Découvrez le détail d'une équipe, sa composition d'équipe, son historique, le maillot , le stade et bien d'autre informations...",
 };
 
-import Team from "./team";
+import Team from "../../../components/team";
 
 const page = async ({ params }) => {
   const { slug } = params;

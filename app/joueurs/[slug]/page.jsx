@@ -1,4 +1,4 @@
-import Player from "./player";
+import Player from "../../../components/player";
 
 export const metadata = {
   title: "Détail d'un joueur - In Victor We Trust",

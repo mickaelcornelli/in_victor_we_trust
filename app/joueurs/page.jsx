@@ -1,4 +1,4 @@
-import Players from "./players"
+import Players from "../../components/players"
 
 export const metadata = {
   title: "Liste des joueurs - In Victor We Trust",

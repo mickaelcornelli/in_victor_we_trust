@@ -4,7 +4,7 @@ export const metadata = {
     "Découvrez le classement de la NBA des conférences ouest/est. Filtrer les années pour découvrir plus de classement.",
 };
 
-import Standing from "./standing";
+import Standing from "../../components/standing";
 
 const page = () => {
   return <Standing />;

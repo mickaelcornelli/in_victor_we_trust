@@ -19,7 +19,7 @@ const Match = ({ params }) => {
   const fetchData = async () => {
     try {
       const response = await getGameSummary(slug);
-
+      
       if (response === undefined) {
         return (
           <div className="flex flex-col items-center justify-center h-screen">
@@ -34,7 +34,11 @@ const Match = ({ params }) => {
         );
       }
 
-      if (response.status === "closed") {
+      if (
+        response.status === "closed" ||
+        response.status === "created" ||
+        response.status === "scheduled"
+      ) {
         const teamHomeLogo = await getTeamLogo(response.home.name);
         const teamAwayLogo = await getTeamLogo(response.away.name);
 
@@ -51,6 +55,8 @@ const Match = ({ params }) => {
         const youtubeResponse = await researchKeywordOnYoutube(
           `${response.home.name} vs ${response.away.name}`
         );
+        console.log(youtubeResponse)
+
         setYoutubeID(youtubeResponse);
       }
 
@@ -95,17 +101,18 @@ const Match = ({ params }) => {
     <Suspense fallback={<div>Chargement du match...</div>}>
       {matchDetails && (
         <>
-          {matchDetails.status === "scheduled" && (
-            <div className="flex flex-col items-center justify-center h-screen">
-              <h1 className="text-2xl font-bold mb-4">Match à venir</h1>
-              <p className="text-gray-600 mb-8">
-                Le résumé du match n'est pas encore disponible.
-              </p>
-              <Link href="/#dailymatchs" className="btn bg-primary">
-                Revenir aux matchs du jour
-              </Link>
-            </div>
-          )}
+          {matchDetails.status === "scheduled" ||
+            (matchDetails.status === "created" && (
+              <div className="flex flex-col items-center justify-center h-screen">
+                <h1 className="text-2xl font-bold mb-4">Match à venir</h1>
+                <p className="text-gray-600 mb-8">
+                  Le résumé du match n'est pas encore disponible.
+                </p>
+                <Link href="/#dailymatchs" className="btn bg-primary">
+                  Revenir aux matchs du jour
+                </Link>
+              </div>
+            ))}
 
           {matchDetails.status === "closed" && (
             <section className="w-full mx-auto p-6 bg-zinc-900 shadow-md pt-8 min-h-lvh overflow-x-auto">

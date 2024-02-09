@@ -1,6 +1,7 @@
 "use client";
+
 import Image from "next/image";
-import { NBAList } from "../../constants";
+import { NBAList } from "../constants";
 import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import {
@@ -9,26 +10,28 @@ import {
   HiOutlineArrowNarrowDown,
   HiOutlineArrowNarrowUp,
 } from "react-icons/hi";
-import { extractPlayerIdFromImageUrl } from "../../lib/utils"
+import { extractPlayerIdFromImageUrl } from "../lib/utils";
+import useDeviceSize from "../lib/useDeviceSize";
 
 const Players = () => {
   // Déterminer si l'application est vu sur mobile ou pc
-  const [width, setWidth] = useState(window.innerWidth);
+  /* const [width, setWidth] = useState(window.innerWidth); */
+  const [width] = useDeviceSize(); 
 
   // État pour stocker les données des joueurs
   const [players, setPlayers] = useState([]);
   const scrollContainerRef = useRef(null);
 
-  useEffect(() => {
+  /* useEffect(() => {
     window.addEventListener("resize", handleWindowSizeChange);
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
     };
-  }, []);
+  }, []); */
 
-  const handleWindowSizeChange = () => {
+  /* const handleWindowSizeChange = () => {
     setWidth(window.innerWidth);
-  };
+  }; */
 
   const scrollLeft = () => {
     scrollContainerRef.current.scrollBy({ left: -632, behavior: "smooth" });
@@ -58,6 +61,7 @@ const Players = () => {
             width={25}
             height={25}
             alt={`Logo ${team.name}`}
+            className="object-contain"
           />
         </div>
       )
@@ -84,7 +88,7 @@ const Players = () => {
               <img
                 src={player.imgURL}
                 alt={`${player?.name}`}
-                className="w-64 md:w-full rounded mb-4"
+                className="w-64 md:w-full h-auto rounded mb-4"
               />
               <h2 className="font-black">
                 {player.name !== undefined

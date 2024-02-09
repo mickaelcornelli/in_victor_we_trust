@@ -1,10 +1,10 @@
 "use client";
 
-import { getNbaStandings } from "../../api/api";
+import { getNbaStandings } from "../api/api";
 import { useEffect, useState } from "react";
 import { ThreeDots } from "react-loader-spinner";
-import ComboBoxSeasons from "../../components/ComboBoxSeasons";
-import { getTeamLogo } from "../../api/api";
+import ComboBoxSeasons from "./ComboBoxSeasons";
+import { getTeamLogo } from "../api/api";
 import Image from "next/image";
 
 const Standing = () => {

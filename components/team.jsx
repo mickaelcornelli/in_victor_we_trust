@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getTeamDetails } from "../../../api/api";
-import { NBAList } from "../../../constants";
+import { getTeamDetails } from "../api/api";
+import { NBAList } from "../constants";
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";

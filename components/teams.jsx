@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { NBAList } from "../../constants";
+import { NBAList } from "../constants";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ThreeDots } from "react-loader-spinner";
